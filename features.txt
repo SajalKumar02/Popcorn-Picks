@@ -1,0 +1,61 @@
+TMDB API : https://developer.themoviedb.org/docs/getting-started
+
+Features (Phase-wise, follow strictly)
+
+🔹 Phase 1 — Basic API Integration
+
+Features:
+Fetch trending movies
+Display movie cards (poster, title, rating)
+Loading state
+Error state
+Concepts:
+useEffect + fetch
+Component structure
+Conditional rendering
+
+
+🔹 Phase 2 — Search (Important)
+
+Features:
+Search movies
+Debounce input (300–500ms delay)
+Show results dynamically
+Concepts:
+Debouncing (you likely don’t know this properly)
+Controlled inputs
+Avoiding unnecessary API calls
+
+🔹 Phase 3 — Routing (Non-negotiable)
+
+Features:
+Movie details page (/movie/:id)
+Show:
+Poster
+Overview
+Rating
+Release date
+Concepts:
+React Router
+Dynamic routes
+URL params
+
+🔹 Phase 4 — Favorites System
+
+Features:
+Add/remove favorites
+Persist using localStorage
+Favorites page
+Concepts:
+Local storage sync
+Custom hooks (important)
+
+🔹 Phase 5 — Pagination / Infinite Scroll
+
+Features:
+Load more movies
+OR
+Infinite scrolling
+Concepts:
+Pagination logic
+State merging (very important skill)
