@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Sidebar = () => {
   return (
-    <aside className="w-64 border-r flex flex-col h-screen p-6">
+    <aside className="w-64 border-r flex flex-col h-screen p-6 pb-0">
       {/* Title */}
       <div className="mb-10 flex items-center gap-3 transition-transform duration-300 ease-out hover:scale-125 group cursor-pointer">
         <img
@@ -24,7 +24,7 @@ const Sidebar = () => {
           <li>
             <button
               href="#"
-              className="block px-4 py-2 rounded-md font-medium cursor-pointer"
+              className="block px-4 py-2 rounded-md font-medium text-sm cursor-pointer"
             >
               Home
             </button>
@@ -32,7 +32,7 @@ const Sidebar = () => {
           <li>
             <button
               href="#"
-              className="block px-4 py-2 rounded-md font-medium cursor-pointer"
+              className="block px-4 py-2 rounded-md font-medium text-sm cursor-pointer"
             >
               Favourites
             </button>
@@ -40,7 +40,7 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="block px-4 py-2 rounded-md font-medium cursor-pointer"
+              className="block px-4 py-2 rounded-md font-medium text-sm cursor-pointer"
             >
               Coming Soon
             </a>
@@ -48,7 +48,7 @@ const Sidebar = () => {
           <li>
             <a
               href="#"
-              className="block px-4 py-2 rounded-md font-medium cursor-pointer"
+              className="block px-4 py-2 rounded-md font-medium text-sm cursor-pointer"
             >
               Trending
             </a>
@@ -62,7 +62,7 @@ const Sidebar = () => {
           <li>
             <Link
               href="#"
-              className="block px-4 py-2 rounded-md cursor-pointer"
+              className="text-sm block px-4 py-2 rounded-md cursor-pointer"
             >
               Settings
             </Link>
@@ -70,7 +70,7 @@ const Sidebar = () => {
           <li>
             <Link
               href="#"
-              className="block px-4 py-2 rounded-md cursor-pointer"
+              className="text-sm block px-4 py-2 rounded-md cursor-pointer"
             >
               Support
             </Link>
@@ -79,15 +79,22 @@ const Sidebar = () => {
       </nav>
 
       {/* Latest Watched */}
-      <section className="flex flex-col flex-1 min-h-0">
-        <h3 className="text-lg font-semibold mb-3">Watched</h3>
-        <div className="space-y-2 flex-1 min-h-0 overflow-y-scroll relative hide-scrollbar">
+      <section className="relative flex flex-col flex-1 min-h-0">
+        <h3 className="text-lg font-semibold mb-3 relative z-20 text-[#162125] dark:text-[#f1f5f9]">
+          Watched
+        </h3>
+        <div className="space-y-4 flex-1 overflow-auto min-h-0 relative hide-scrollbar z-20">
           {/* MiniMovieCard - Component */}
-          {["Tubelight", "Hero", "Don", "1960"].map((title) => (
-            <MovieMiniCard key={title} title={title} />
-          ))}
-          <div className="flex justify-end">
-            <Link to="/already-watched" className="underline text-sm">
+          {["Dhurandar", "Dhurandar", "Dhurandar", "Dhurandar"].map(
+            (title) => (
+              <MovieMiniCard key={title} title={title} />
+            ),
+          )}
+          <div className="flex justify-end mb-10">
+            <Link
+              to="/already-watched"
+              className="underline text-sm text-[#162125] dark:text-[#f1f5f9]"
+            >
               More
             </Link>
           </div>
