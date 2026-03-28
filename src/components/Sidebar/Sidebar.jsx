@@ -79,29 +79,35 @@ const Sidebar = () => {
       </nav>
 
       {/* Latest Watched */}
+
       <section className="relative flex flex-col flex-1 min-h-0">
-        <h3 className="text-lg font-semibold mb-3 relative z-20 text-[#162125] dark:text-[#f1f5f9]">
+        <h3 className="text-lg font-semibold mb-3 z-10 relative">
           Watched
         </h3>
-        <div className="space-y-4 flex-1 overflow-auto min-h-0 relative hide-scrollbar z-20">
-          {/* MiniMovieCard - Component */}
-          {["Dhurandar", "Dhurandar", "Dhurandar", "Dhurandar"].map(
-            (title) => (
-              <MovieMiniCard key={title} title={title} />
-            ),
-          )}
-          <div className="flex justify-end mb-10">
-            <Link
-              to="/already-watched"
-              className="underline text-sm text-[#162125] dark:text-[#f1f5f9]"
-            >
-              More
-            </Link>
+
+        <div className="relative flex-1 min-h-0">
+          <div className="space-y-4 overflow-auto h-full hide-scrollbar">
+            {["Dhurandar", "Dhurandar", "Dhurandar", "Dhurandar"].map(
+              (title, id) => (
+                <MovieMiniCard key={id} title={title} />
+              ),
+            )}
+
+            <div className="flex justify-end mb-10">
+              <Link
+                to="/already-watched"
+                className="underline text-sm"
+              >
+                More
+              </Link>
+            </div>
           </div>
+
+          {/* Gradient overlay */}
+          <div className="absolute bottom-0 left-0 right-0 h-20 bg-linear-to-t from-[#162125] to-transparent pointer-events-none" />
         </div>
       </section>
     </aside>
   );
 };
-
 export default Sidebar;
