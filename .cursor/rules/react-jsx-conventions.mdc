@@ -1,0 +1,21 @@
+---
+description: React (JS/JSX) component conventions
+globs: src/**/*.{js,jsx}
+alwaysApply: false
+---
+
+# React conventions
+
+- Use **functional components** and hooks.
+- Prefer `const Component = () => { ... }` and `export default Component` (match existing files).
+- Keep event handlers named `handleX` and state setters named `setX`.
+
+## State & effects
+
+- Keep `useEffect` focused; if it grows, extract helper functions.
+- When reading/writing to `localStorage`, guard for `typeof window === "undefined"` where relevant (match `Navbar.jsx`).
+
+## Markup & accessibility
+
+- Use semantic HTML (`button`, `nav`, `main`) and include `type="button"` on buttons.
+- If an element is interactive, ensure it has an accessible label (`aria-label` / `title`) where needed.

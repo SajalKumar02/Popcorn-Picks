@@ -1,0 +1,23 @@
+---
+description: Styling rules (Tailwind-first) + theme guidelines
+globs: src/**/*.{css,js,jsx}
+alwaysApply: false
+---
+
+# Styling & theme
+
+- Prefer **Tailwind utility classes** for component styling.
+- Global CSS is allowed when it provides **cross-cutting behavior** (theme variables, animations, reusable utilities) and should live in `src/index.css`.
+
+## Dark mode
+
+- Dark mode is toggled by adding/removing the `dark` class on `document.documentElement`.
+- When adding UI colors, prefer `dark:` variants instead of duplicating components.
+- Reuse existing theme tokens where possible:
+  - `#f1f5f9` (light surface/background)
+  - `#162125` (dark background / primary ink)
+  - `#3c3f40` (muted dark surface already used in the UI)
+
+## Inline styles
+
+- Avoid inline styles **except** for setting CSS variables or motion effects (e.g., `el.style.setProperty("--rx", ...)`).

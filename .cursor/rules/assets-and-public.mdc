@@ -1,0 +1,11 @@
+---
+description: Asset handling (public/ images) conventions
+globs: public/**/*
+alwaysApply: false
+---
+
+# Assets (`public/`)
+
+- Prefer **compressed** images and consistent naming (`MovieImage1.jpeg`, etc.).
+- Reference public assets with root paths like `/MovieImage1.jpeg` (not relative filesystem paths).
+- Avoid adding very large binaries; if needed, prefer smaller placeholders or use a CDN.

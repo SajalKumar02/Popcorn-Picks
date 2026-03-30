@@ -1,0 +1,22 @@
+---
+description: Project context + how to work in this repo
+alwaysApply: true
+---
+
+# Movie Recommendation System (frontend)
+
+- The UI is **React** with **JSX** components under `src/`.
+- Styling is primarily **Tailwind** via `className`, with a small amount of global CSS in `src/index.css`.
+- Theme is **class-based dark mode** (the root element toggles `dark`).
+
+## Working conventions
+
+- Prefer **small, composable components** and keep logic close to where it is used.
+- Keep changes **localized**: avoid sweeping refactors unless required to fix a bug.
+- Match existing patterns: functional components, named handlers (`handleX`), and consistent className ordering.
+
+## Theme & colors (project defaults)
+
+- Light background: `#f1f5f9`
+- Dark background: `#162125`
+- If you introduce new foreground/background colors, provide **both light and dark** variants (Tailwind `dark:`) unless the style is intentionally theme-agnostic.
