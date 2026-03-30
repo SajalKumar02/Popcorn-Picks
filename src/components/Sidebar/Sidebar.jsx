@@ -79,7 +79,6 @@ const Sidebar = () => {
       </nav>
 
       {/* Latest Watched */}
-
       <section className="relative flex flex-col flex-1 min-h-0">
         <h3 className="text-lg font-semibold mb-3 z-10 relative">
           Watched
@@ -87,11 +86,13 @@ const Sidebar = () => {
 
         <div className="relative flex-1 min-h-0">
           <div className="space-y-4 overflow-auto h-full hide-scrollbar">
-            {["Dhurandar", "Dhurandar", "Dhurandar", "Dhurandar"].map(
-              (title, id) => (
-                <MovieMiniCard key={id} title={title} />
-              ),
-            )}
+            {[
+              "MovieImage1.jpeg",
+              "MovieImage2.jpeg",
+              "MovieImage3.jpeg",
+            ].map((src, id) => (
+              <MovieMiniCard key={id} src={src} />
+            ))}
 
             <div className="flex justify-end mb-10">
               <Link
